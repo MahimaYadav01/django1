@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}contact| {% endblock title %}
+ {% block body %}
+ <div class ="container-fluid my-4 ">
+   
+    <img src="https://hemeonlearning.com/wp-content/uploads/2021/04/HemeonLearning-Page-Banner-Contact.png" class="d-block w-100" alt="ICECREAM PARLOUR" width=5 height=375>
+ </div>
+ <div class ="container my-4 text-center ">
+ <form method="POST" action="/contact">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col my-4">
+        <input type="text" class="form-control" id="fname" name="fname" placeholder="First name">
+      </div>
+      <div class="col my-4">
+        <input type="text" class="form-control" id="lname" name="lname" placeholder="Last name">
+      </div>
+    </div>
+    <div class="form-group my-4">
+      <label for="exampleInputEmail1"><b>Email address*</b></label>
+      <input type="email" class="form-control my-2"  id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group my-4">
+      <label for="phone"><b>Contact Number</b></label>
+      <input type="phone" class="form-control my-2"  id="phnno" name="phnno" placeholder="Enter your Contact number">
+    </div>
+    <div class="form-group my-2">
+        <label for="desc"><b>Message*</b></label>
+        <textarea class="form-control my-2" id="desc" name="desc"rows="3"></textarea>
+      </div>
+    <button type="submit" class="btn btn-primary my-4">Submit</button>
+  </form>
+</div>
+
+ {% endblock body %}

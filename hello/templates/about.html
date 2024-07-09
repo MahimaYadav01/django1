@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}about | {% endblock title %}
+ {% block body %}
+ <body style="margin: 0; font-family: 'Nunito', sans-serif;">
+ 
+   <div style="display: flex; flex-direction: column; align-items: center; padding: 0px 50px;">
+     <div style="display: flex; flex-direction: row; max-width: 1320px; justify-content: center; align-items: center; margin: 0px 0; padding: 10px; width: 100%;">
+       
+       <div style="width: 50%; padding: 0 10px; box-sizing: border-box;">
+         <p style="font-size: 50px; font-weight: 700; line-height: 28px; color: rgb(0, 135, 177); margin-bottom: 33px;">About</p>
+         <p style="font-size: 32px; line-height: 40px; font-weight: 700; color: rgb(102, 102, 102); margin-bottom: 15px;">Indulge in Sweet Delights – Where Every Scoop is a Smile!</p>
+         <p style="font-size: 18px; line-height: 28px; color: rgb(153, 153, 153); margin-bottom: 40px; margin-right:50px; text-align:justify">Welcome to our Ice Cream Parlour! We are dedicated to bringing you the best and most delicious ice cream experience. Our parlour offers a wide range of flavours made from the finest ingredients. Whether you are looking for a classic vanilla, a rich chocolate, or a unique and exotic flavour, we have something for everyone.
+
+          Our journey started with a passion for creating high-quality ice cream that brings joy to every bite. We believe in using fresh and natural ingredients, and our ice creams are made in small batches to ensure the best taste and texture. Our friendly staff is here to make your visit enjoyable and memorable.</p>
+         <a href="#">
+           <button style="font-size: 18px; line-height: 28px; color: #fff; background-color: rgb(244, 152, 146); border: none; border-radius: 10px; padding: 9px 45px; cursor: pointer; box-shadow: rgba(244, 152, 146, 0.25) 0px 10px 20px;">View More</button>
+         </a>
+       </div>
+ 
+       <div style="width: 46%; height: 600px; display: flex; justify-content: flex-start; align-items: center; position: relative;">
+         <iframe allowfullscreen="allowfullscreen" style="width: 90%; height: 450px; border-radius: 10px; z-index: 10;" src="https://i0.wp.com/media1.giphy.com/media/3o85xJlRU8SJkyEWHe/giphy.gif" position: relative; scrolling="no"></iframe>
+         <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/cw3.svg" style="position: absolute; width: 80%; height: 600px; top: 0; right: 0; object-fit: cover;">
+       </div>
+     
+     </div>
+   </div>
+ 
+
+ 
+ 
+ 
+ <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="/" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="/services" class="nav-link px-2 text-body-secondary">Services</a></li>
+      <li class="nav-item"><a href="/contact" class="nav-link px-2 text-body-secondary">Contact</a></li>
+      
+      <li class="nav-item"><a href="/about" class="nav-link px-2 text-body-secondary">About</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+  </footer>
+</body>{% endblock body %}
