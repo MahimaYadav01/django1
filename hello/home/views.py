@@ -1,30 +1,63 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,redirect
 from home.models import Contact
+from home.models import Signup
 from datetime import datetime
+from django.contrib.auth import authenticate, login 
+from django.contrib.auth.models import User
+from django.contrib import messages
+from django.contrib.auth import logout
+
 # Create your views here.
 
 def home(request):
     return HttpResponse("hello mahima,its okay you got this")
 def index(request):
-    # context={
-    #     "variable":"life sucks"
-    # }
+    
     return render(request,"index.html")
+def loginuser(request):
+     
+    if request.method=="POST":
+        username = request.POST.get("username")  
+        password = request.POST.get("password")
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request,user)
+            return redirect("/")
+        if  request.user.is_anonymous:
+            return render(request,"login.html")
+   
+    else:
+        return render(request, 'login.html')
+def logoutuser(request):
+    logout(request)
+    return redirect("/login")
 
 def contact(request):
     if request.method=="POST":
         fname = request.POST.get("fname")
         lname = request.POST.get("lname")
+        name=f"{fname} {lname}"
         email=request.POST.get("email")
         phnno=request.POST.get("phnno")
         desc=request.POST.get("desc")
         
-        contact=Contact(fname=fname,lname=lname, email=email, phnno =phnno ,desc=desc ,date=datetime.today())
+        contact=Contact(name=name, email=email, phnno =phnno ,desc=desc ,date=datetime.today())
         contact.save()
+        messages.success(request, "Your Message has been sent !")
     return render(request,"contact.html")
 
 def about(request):
+    
     return render(request,"about.html")
+def signup(request):
+    if request.method=="POST":
+        username = request.POST.get("username")  
+        password = request.POST.get("password")
+        signup = Signup(username=username, password=password)
+        signup.save()
+        messages.success(request, "Your account has been created succesfully !")
+        # return redirect("/")
+    return render(request,"signup.html")
 
 def services(request):
      return render(request,"services.html")
