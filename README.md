@@ -1,6 +1,9 @@
 # Django website
 
-![Screenshot (355)](https://github.com/MahimaYadav01/d1/assets/117558215/7f1a2863-58c4-49c2-bc03-8de17d79a9d5)
+![Screenshot (371)](https://github.com/user-attachments/assets/77ff16a8-8062-4da2-951e-821c572d3697)
+![Screenshot (372)](https://github.com/user-attachments/assets/dbbca003-65f7-49e4-8b92-8c078f4f82ec)
+![Screenshot (373)](https://github.com/user-attachments/assets/e88cd378-eaa3-4d4b-9575-b3a5a3c234b8)
+
 
 ![Screenshot (356)](https://github.com/MahimaYadav01/d1/assets/117558215/438ff4cc-1102-4430-becc-723a0c996dee)
 
@@ -14,4 +17,7 @@
 
 ![image](https://github.com/MahimaYadav01/d1/assets/117558215/3d349ec4-f035-4c68-ba63-8abc7591d0af)
 
-![image](https://github.com/MahimaYadav01/d1/assets/117558215/890fac5d-8a7d-4428-bb76-446a76a93f11)
+![Screenshot (374)](https://github.com/user-attachments/assets/00957f8c-4310-4b29-8e18-3875f4213254)
+
+
+
